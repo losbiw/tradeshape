@@ -1,0 +1,232 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    max-width: none !important;
+    position: relative;
+    color: white;
+    margin-bottom: 2rem;
+
+    .content {
+        padding: 7rem;
+        max-width: 1440px;
+        align-items: center;
+    }
+
+    .text {
+        grid-column: span 5;
+    }
+
+    .background {
+        position: absolute;
+        top: -2rem;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .graphics {
+        width: 100%;
+        grid-column-start: 7;
+        grid-column-end: 12;
+    }
+
+    h1 {
+        text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    p {
+        font-size: 0.875rem;
+        line-height: 160%;
+        margin: 1.6rem 0 3rem;
+    }
+
+    .contact {
+        display: inline-block;
+        padding: 0.65rem 1.6rem;
+        font-size: 0.85rem;
+        border-radius: .5rem;
+        background-color: #2960F7;
+        color: white;
+
+        &:hover {
+            transition: 100ms;
+            transform: scale(1.08);
+        }
+    }
+}
+
+.services {
+    margin-bottom: 10rem;
+
+    .text {
+        grid-column: span 3;
+
+        h1 {
+            color: #202039;
+            font-size: 1.55rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        p {
+            font-size: 0.85rem;
+            color: #4E4E65;
+            line-height: 150%;
+            margin: 1.5rem 0 2.2rem;
+        }
+
+        a {
+            display: inline-block;
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: #2960F7;
+            margin: 0;
+
+            &:hover {
+                transition: 100ms;
+                transform: scale(1.08);
+            }
+        }
+    }
+
+    .element {
+        grid-column: span 3;
+        border-radius: 0.65rem;
+        overflow: hidden;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 10rem;
+        }
+
+        .description {
+            display: flex;
+            align-items: center;
+            margin: 0.8rem 1.7rem;
+
+            img {
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+
+            h2 {
+                margin: 0;
+                font-size: 0.8rem;
+                font-weight: 500;
+                color: #4E4E65;
+                margin-left: 1.1rem;
+            }
+        }
+    }
+}
+
+.about {
+    align-items: center;
+    margin-bottom: 5rem;
+
+    .stats {
+        grid-column: span 3;
+        display: flex;
+        flex-wrap: wrap;
+
+        .numbers {
+            width: 50%;
+
+            &:first-child {
+                margin-bottom: 3rem;
+            }
+        }
+
+        h3 {
+            color: #2960F7;
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        p {
+            max-width: 90%;
+            color: #4E4E65;
+            line-height: 140%;
+            font-size: 0.95rem;
+            margin: 0.5rem 0;
+        }
+    }
+
+    .text {
+        grid-column: span 9;
+
+        h1 {
+            color: #202039;
+            font-size: 1.55rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        p {
+            font-size: 0.85rem;
+            color: #4E4E65;
+            line-height: 150%;
+            margin: 1.5rem 0 2.2rem;
+        }
+
+        a {
+            display: inline-block;
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: #2960F7;
+            margin: 0;
+
+            &:hover {
+                transition: 100ms;
+                transform: scale(1.08);
+            }
+        }
+    }
+}
+
+hr {
+    border: 1px solid #CBCBE3;
+}
+
+.team {
+    margin: 4rem 0 9.5rem;
+
+    .person {
+        display: flex;
+        align-items: center;
+        grid-column: span 3;
+
+        img {
+            width: 5rem;
+            border-radius: 100%;
+            margin-right: 1.25rem;
+        }
+
+        h3 {
+            color: #202039;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        p {
+            margin: 0.3rem 0 0;
+            color: #4E4E65;
+            font-size: 0.85rem;
+            font-weight: 500;
+            line-height: 1.125rem;
+        }
+    }
+}

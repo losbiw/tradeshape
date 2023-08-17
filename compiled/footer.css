@@ -1,0 +1,167 @@
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  background-color: #141424;
+}
+footer .content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+}
+footer hr {
+  width: 100%;
+  border: 1px solid #41475F;
+  margin: 0;
+}
+footer .text {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  color: white;
+}
+footer .text h4 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-top: 0;
+}
+footer .text p {
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 140%;
+  margin-bottom: 0;
+}
+footer .contact {
+  align-items: center;
+  margin: 6rem 0 5.5rem;
+}
+footer form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.9rem;
+  -moz-column-gap: 0;
+       column-gap: 0;
+  grid-column-start: 7;
+  grid-column-end: 13;
+}
+footer form input {
+  width: 48%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.95rem;
+  caret-color: white;
+  color: white;
+}
+footer form input[type=submit] {
+  width: auto;
+  padding: 0.9rem 3.4rem;
+  font-size: 0.95rem;
+  border-radius: 0.35rem;
+  background-color: #2960F7;
+  color: white;
+  border: none;
+  margin-top: 1.5rem;
+}
+footer form input[type=submit]:hover {
+  cursor: pointer;
+  transition: 100ms;
+  transform: scale(1.08);
+}
+footer form input:focus {
+  outline: none;
+}
+footer form input:nth-of-type(3) {
+  width: 100%;
+}
+footer form input:hover::-moz-placeholder {
+  font-size: 1.05rem;
+  -moz-transition: 200ms;
+  transition: 200ms;
+}
+footer form input:hover::placeholder {
+  font-size: 1.05rem;
+  transition: 200ms;
+}
+footer form input::-moz-placeholder {
+  color: #41475F;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+footer form input::placeholder {
+  color: #41475F;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+footer .branding {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem 0;
+}
+footer .branding .logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+footer .branding .logo .circle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #2960F7;
+  border-radius: 100%;
+}
+footer .branding .logo .circle .inner {
+  margin-right: 0.3rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  background-color: white;
+  border-radius: 100%;
+}
+footer .branding .logo p {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 0 0 0 0.8rem;
+  color: white;
+}
+footer .branding .copyright {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #787E8D;
+}
+footer .branding .copyright div {
+  margin: 0 0.65rem;
+  height: 3px;
+  width: 3px;
+  background-color: #787E8D;
+  border-radius: 100%;
+}
+footer .branding .copyright * {
+  margin: 0;
+}
+footer .branding .links {
+  display: flex;
+}
+footer .branding .links .block {
+  margin-left: 4rem;
+}
+footer .branding .links h3 {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: white;
+  margin: 0 0 1.25rem;
+}
+footer .branding .links a {
+  font-size: 0.8rem;
+  display: block;
+  color: #787E8D;
+  margin-bottom: 0.75rem;
+}

@@ -1,0 +1,133 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  max-width: none !important;
+  position: relative;
+  color: white;
+  margin-bottom: 2rem;
+}
+.hero .content {
+  padding: 7rem;
+  max-width: 1440px;
+  align-items: center;
+}
+.hero .text {
+  grid-column: span 5;
+}
+.hero .background {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.hero .background img {
+  width: 100%;
+  height: 100%;
+}
+.hero .graphics {
+  width: 100%;
+  grid-column-start: 7;
+  grid-column-end: 12;
+}
+.hero h1 {
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+.hero p {
+  font-size: 0.875rem;
+  line-height: 160%;
+  margin: 1.4rem 0 0;
+}
+.hero .contact {
+  padding: 0.65rem 1.6rem;
+  font-size: 0.85rem;
+  border-radius: 0.5rem;
+  background-color: #2960F7;
+  color: white;
+}
+
+.services {
+  margin: 0 0 9.5rem;
+}
+.services .container {
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+.services .item {
+  width: 100%;
+  position: relative;
+  padding: 7rem 0 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+.services .item .background {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+.services .item .description {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1.4rem 1.75rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.82) 33.33%, #FFF 72.92%);
+}
+.services .item .description p {
+  visibility: hidden;
+  color: #4E4E65;
+  font-size: 0.8125rem;
+  line-height: 1.3125rem;
+  margin: 1rem 0 0;
+}
+.services .item .description.visible {
+  flex-direction: column;
+  background: white;
+}
+.services .item .description.visible p {
+  visibility: visible;
+}
+.services .item .interface {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services .item .interface .title {
+  display: flex;
+  align-items: center;
+}
+.services .item .interface img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.services .item .interface h3 {
+  color: #202039;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.3125rem;
+  margin: 0 0 0 1.15rem;
+}
+.services .item .interface button {
+  color: #2960F7;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  background: none;
+  margin: 0;
+}
+.services .item .interface button:hover {
+  cursor: pointer;
+  transition: 100ms;
+  transform: scale(1.08);
+}
