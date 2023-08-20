@@ -203,14 +203,15 @@
     }
 
     .stats {
+        width: 100%;
         grid-column: span 3;
         display: flex;
-        justify-content: space-around;
-        gap: 2rem;
+        justify-content: space-between;
 
         @include breakpoint(lg) {
             gap: 0;
             flex-wrap: wrap;
+            justify-content: space-around;
         }
 
         .numbers {
@@ -231,11 +232,11 @@
         }
 
         p {
-            max-width: 90%;
             color: #4E4E65;
             line-height: 140%;
             font-size: 0.95rem;
             margin: 0.5rem 0;
+            width: min-content;
         }
     }
 

@@ -2,7 +2,8 @@ nav {
   width: 100%;
   background-color: white;
   padding: 0 1.5rem;
-  position: fixed;
+  top: 0;
+  position: sticky;
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
   z-index: 100;
 }
@@ -134,7 +135,7 @@ nav .menu a:nth-child(2) {
 
 @keyframes showMenu {
   from {
-    top: -200%;
+    top: -220%;
   }
   to {
     top: 100%;
@@ -145,7 +146,6 @@ nav .menu a:nth-child(2) {
     top: 100%;
   }
   to {
-    top: -200%;
-    display: none;
+    top: -220%;
   }
 }

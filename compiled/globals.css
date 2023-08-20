@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 html,
@@ -42,7 +42,7 @@ a {
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   html {
     font-size: 110%;
   }
