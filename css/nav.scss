@@ -127,7 +127,6 @@ nav {
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
 
         &.hidden {
-            display: block;
             animation: hideMenu .3s ease-out forwards;
         }
 

@@ -5,8 +5,12 @@ menuToggle.addEventListener("click", () => {
     const isVisible = menu.classList.contains("visible");
 
     if (isVisible) {
-        menu.classList.remove("visible");
         menu.classList.add("hidden");
+        menu.classList.remove("visible");
+
+        setTimeout(() => {
+            menu.classList.remove("hidden");
+        }, 300)
     } else {
         menu.classList.add("visible");
         menu.classList.remove("hidden");
