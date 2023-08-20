@@ -1,3 +1,5 @@
+@import './breakpoints.scss';
+
 footer {
     display: flex;
     justify-content: center;
@@ -10,6 +12,12 @@ footer {
         flex-direction: column;
         width: 100%;
         max-width: 1440px;
+        padding: 0 1.5rem;
+
+        @include breakpoint(lg) {
+            padding: 0;
+            display: grid;
+        }
     }
 
     hr {
@@ -38,19 +46,33 @@ footer {
     }
 
     .contact {
+        display: flex;
+        flex-direction: column;
         align-items: center;
         margin: 6rem 0 5.5rem;
+        text-align: center;
+
+        @include breakpoint(lg) {
+            display: grid;
+            text-align: start;
+        }
     }
 
     form {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         gap: 1.9rem;
-        column-gap: 0;
+        column-gap: 0.95rem;
         grid-column-start: 7;
         grid-column-end: 13;
+        margin-top: 4.4rem;
+
+        @include breakpoint(lg) {
+            margin-top: 0;
+            justify-content: space-between
+        }
 
         input {
             width: 48%;
@@ -103,14 +125,24 @@ footer {
     .branding {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         margin: 2.5rem 0;
 
+        @include breakpoint(lg) {
+            justify-content: space-between;
+        }
+
         .logo {
             display: flex;
+            justify-content: center;
             align-items: center;
             margin-bottom: 1rem;
+
+            @include breakpoint(lg) {
+                justify-content: start;
+            }
+    
     
             .circle {
                 display: flex;
@@ -158,7 +190,11 @@ footer {
         }
         
         .links {
-            display: flex;
+            display: none;
+
+            @include breakpoint(lg) {
+                display: flex;
+            }
 
             .block {
                 margin-left: 4rem;

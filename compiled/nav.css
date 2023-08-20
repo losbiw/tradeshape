@@ -1,15 +1,33 @@
-.nav {
+nav {
+  width: 100%;
+  background-color: white;
+  padding: 0 1.5rem;
+  position: fixed;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+@media (min-width: 992px) {
+  nav {
+    padding: 0;
+  }
+}
+nav .container {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
   padding: 0.6rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  position: relative;
+  z-index: 100;
+  background: white;
 }
-.nav .logo {
+nav .logo {
   display: flex;
   align-items: center;
 }
-.nav .logo .circle {
+nav .logo .circle {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -18,42 +36,116 @@
   background-color: #2960F7;
   border-radius: 100%;
 }
-.nav .logo .circle .inner {
+nav .logo .circle .inner {
   margin-right: 0.3rem;
   width: 0.95rem;
   height: 0.95rem;
   background-color: white;
   border-radius: 100%;
 }
-.nav .logo p {
+nav .logo p {
   font-size: 1.05rem;
   font-weight: 500;
   margin: 0 0 0 0.8rem;
   color: #202039;
 }
-.nav .links {
-  display: flex;
+nav .links {
+  display: none;
 }
-.nav .links a {
+@media (min-width: 992px) {
+  nav .links {
+    display: flex;
+  }
+}
+nav .links a {
   display: block;
   font-size: 0.95rem;
   color: #202039;
 }
-.nav .links a:hover {
+nav .links a:hover {
   transition: 100ms;
   transform: scale(1.08);
 }
-.nav .links a:nth-child(2) {
+nav .links a:nth-child(2) {
   margin: 0 3.5rem;
 }
-.nav .contact {
+nav .button-container {
+  display: flex;
+  align-items: center;
+}
+nav .contact {
   padding: 0.65rem 1.6rem;
   font-size: 0.85rem;
   border-radius: 0.5rem;
   background-color: #2960F7;
   color: white;
 }
-.nav .contact:hover {
+nav .contact:hover {
   transition: 100ms;
   transform: scale(1.08);
+}
+nav .menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: none;
+  background: none;
+  margin-left: 1.5rem;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  nav .menu-toggle {
+    display: none;
+  }
+}
+nav .menu-toggle .line {
+  width: 1.5rem;
+  height: 3px;
+  background: #141424;
+}
+nav .menu {
+  display: none;
+  width: 100vw;
+  padding: 2.5rem 1.5rem;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  background: white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+nav .menu.hidden {
+  display: block;
+  animation: hideMenu 0.3s ease-out forwards;
+}
+nav .menu.visible {
+  display: block;
+  animation: showMenu 0.3s ease-out;
+}
+nav .menu a {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 1.1rem;
+  color: #202039;
+}
+nav .menu a:nth-child(2) {
+  margin: 1.5rem 0;
+}
+
+@keyframes showMenu {
+  from {
+    top: -200%;
+  }
+  to {
+    top: 100%;
+  }
+}
+@keyframes hideMenu {
+  from {
+    top: 100%;
+  }
+  to {
+    top: -200%;
+    display: none;
+  }
 }

@@ -1,9 +1,29 @@
-.nav {
-    padding: 0.6rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@import './breakpoints.scss';
+
+nav {
+    width: 100%;
     background-color: white;
+    padding: 0 1.5rem;
+    position: fixed;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
+    z-index: 100;
+
+    @include breakpoint(lg) {
+        padding: 0;
+    }
+
+    .container {
+        margin: 0 auto;
+        max-width: 1440px;
+        width: 100%;
+        padding: 0.6rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+        background: white;
+    }
 
     .logo {
         display: flex;
@@ -36,7 +56,11 @@
     }
 
     .links {
-        display: flex;
+        display: none;
+
+        @include breakpoint(lg) {
+            display: flex;
+        }
     }
 
     .links a {
@@ -54,6 +78,11 @@
         }
     }
 
+    .button-container {
+        display: flex;
+        align-items: center;
+    }
+
     .contact {
         padding: 0.65rem 1.6rem;
         font-size: 0.85rem;
@@ -66,4 +95,67 @@
             transform: scale(1.08);
         }
     }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        border: none;
+        background: none;
+        margin-left: 1.5rem;
+        padding: 0;
+
+        @include breakpoint(lg) {
+            display: none
+        }    
+
+        .line {
+            width: 1.5rem;
+            height: 3px;
+            background: #141424;
+        }
+    }
+
+    .menu {
+        display: none;
+        width: 100vw;
+        padding: 2.5rem 1.5rem;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        background: white;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+
+        &.hidden {
+            display: block;
+            animation: hideMenu .3s ease-out forwards;
+        }
+
+        &.visible {
+            display: block;
+            animation: showMenu .3s ease-out;
+        }
+
+        a {
+            text-align: center;
+            display: block;
+            width: 100%;
+            font-size: 1.1rem;
+            color: #202039;
+
+            &:nth-child(2) {
+                margin: 1.5rem 0;
+            }
+        }
+    }
+}
+
+@keyframes showMenu {
+    from{top: -200%;}
+    to {top: 100%;}
+}
+
+@keyframes hideMenu {
+    from{top: 100%;}
+    to {top: -200%; display: none;}
 }

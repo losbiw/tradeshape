@@ -1,3 +1,5 @@
+@import './breakpoints.scss';
+
 .hero {
     display: flex;
     justify-content: center;
@@ -7,13 +9,27 @@
     margin-bottom: 2rem;
 
     .content {
-        padding: 7rem;
+        display: flex;
+        flex-direction: column;
         max-width: 1440px;
         align-items: center;
+
+        padding: 7rem 1.5rem 6.5rem;
+        
+        @include breakpoint(lg) {
+            display: grid;
+            padding: 7rem;
+        }
     }
 
     .text {
-        grid-column: span 5;
+        grid-column: span 6;
+        text-align: center;
+
+        @include breakpoint(lg) {
+            text-align: start;
+            grid-column: span 5;
+        }
     }
 
     .background {
@@ -22,18 +38,30 @@
         left: 0;
         height: 100%;
         width: 100%;
+        background-position: center;
+        overflow: hidden;
         z-index: -1;
 
         img {
-            width: 100%;
+            width: 200%;
             height: 100%;
+
+            @include breakpoint(lg) {
+                width: 100%;
+            }
         }
     }
 
     .graphics {
-        width: 100%;
-        grid-column-start: 7;
-        grid-column-end: 12;
+        width: 66%;
+        margin-top: 2rem;
+
+        @include breakpoint(lg) {
+            margin-top: 0;
+            width: 100%;
+            grid-column-start: 7;
+            grid-column-end: 12;
+        }
     }
 
     h1 {
@@ -50,16 +78,28 @@
     }
 
     .contact {
-        padding: 0.65rem 1.6rem;
+        display: inline-block;
+        padding: 0.8rem 1.6rem;
         font-size: 0.85rem;
         border-radius: .5rem;
         background-color: #2960F7;
         color: white;
+
+        &:hover {
+            transition: 100ms;
+            transform: scale(1.08);
+        }
     }
 }
 
 .services {
-    margin: 0 0 9.5rem;
+    margin: 0 0 7rem;
+    padding: 0 1.5rem;
+
+    @include breakpoint(lg) {
+        padding: 0;
+        margin: 0 0 9.5rem;
+    }
 
     .container {
         grid-column: span 6;
@@ -67,6 +107,16 @@
         flex-direction: column;
         justify-content: center;
         gap: 3rem;
+
+        &:first-child {
+            margin-bottom: 3rem;
+        }
+
+        @include breakpoint(lg) {
+            &:first-child {
+                margin-bottom: 0;
+            }
+        }
     }
 
     .item {

@@ -14,23 +14,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="nav">
-        <div class="logo">
-            <div class="circle">
-                <div class="inner"></div>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <div class="circle">
+                    <div class="inner"></div>
+                </div>
+
+                <p>Tradeshape</p>
             </div>
 
-            <p>Tradeshape</p>
-        </div>
+            <div class="links">
+                <a href="../index.html">Home</a>
+                <a href="./solutions.html">Solutions</a>
+                <a href="./about.html">About</a>
+            </div>
 
-        <div class="links">
+            <div class="button-container">
+                <a href="#footer" class="contact">Contact</a>
+
+                <button class="menu-toggle">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
+            </div>
+        </div>
+        
+        <div class="menu">
             <a href="../index.html">Home</a>
             <a href="./solutions.html">Solutions</a>
             <a href="./about.html">About</a>
         </div>
-
-        <a href="#footer" class="contact">Contact</a>
-    </div>
+    </nav>
 
     <div class="hero">
         <div class="content grid">
@@ -191,5 +206,6 @@
     </footer>
 
     <script src="../scripts/solutions.js"></script>
+    <script src="../scripts/menu.js"></script>
 </body>
 </html>

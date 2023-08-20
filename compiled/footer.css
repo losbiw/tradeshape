@@ -10,6 +10,13 @@ footer .content {
   flex-direction: column;
   width: 100%;
   max-width: 1440px;
+  padding: 0 1.5rem;
+}
+@media (min-width: 992px) {
+  footer .content {
+    padding: 0;
+    display: grid;
+  }
 }
 footer hr {
   width: 100%;
@@ -33,19 +40,35 @@ footer .text p {
   margin-bottom: 0;
 }
 footer .contact {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   margin: 6rem 0 5.5rem;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  footer .contact {
+    display: grid;
+    text-align: start;
+  }
 }
 footer form {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1.9rem;
-  -moz-column-gap: 0;
-       column-gap: 0;
+  -moz-column-gap: 0.95rem;
+       column-gap: 0.95rem;
   grid-column-start: 7;
   grid-column-end: 13;
+  margin-top: 4.4rem;
+}
+@media (min-width: 992px) {
+  footer form {
+    margin-top: 0;
+    justify-content: space-between;
+  }
 }
 footer form input {
   width: 48%;
@@ -100,14 +123,25 @@ footer form input::placeholder {
 footer .branding {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 2.5rem 0;
 }
+@media (min-width: 992px) {
+  footer .branding {
+    justify-content: space-between;
+  }
+}
 footer .branding .logo {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
+}
+@media (min-width: 992px) {
+  footer .branding .logo {
+    justify-content: start;
+  }
 }
 footer .branding .logo .circle {
   display: flex;
@@ -148,7 +182,12 @@ footer .branding .copyright * {
   margin: 0;
 }
 footer .branding .links {
-  display: flex;
+  display: none;
+}
+@media (min-width: 992px) {
+  footer .branding .links {
+    display: flex;
+  }
 }
 footer .branding .links .block {
   margin-left: 4rem;

@@ -1,7 +1,7 @@
 @import './breakpoints.scss';
 
 html {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 html,
@@ -33,12 +33,17 @@ a {
 
 .grid {
     display: grid;
-    column-gap: 20px;
-    grid-template-columns: repeat(12, 1fr);
+    column-gap: 15px;
+    grid-template-columns: repeat(6, 1fr);
+
+    @include breakpoint(lg) {
+        column-gap: 20px;
+        grid-template-columns: repeat(12, 1fr);
+    }
 }
 
-// @include breakpoint(xxl) {
-//     html {
-//       font-size: 120%;
-//     }
-// }
+@include breakpoint(xxl) {
+    html {
+      font-size: 110%;
+    }
+}
